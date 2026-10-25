@@ -30,6 +30,10 @@ use Joomla\CMS\Router\Route;
                         <joomla-alert type="warning"><?php echo Text::_('COM_COMARQUAGE_CODE_INSEE_INVALID'); ?></joomla-alert>
                     <?php endif; ?>
                     <div class="mt-3">
+                        <button class="btn btn-outline-primary" type="submit" onclick="this.form.task.value='refreshLocalInfo'"><?php echo Text::_('COM_COMARQUAGE_LOCAL_REFRESH'); ?></button>
+                        <p class="form-text"><?php echo Text::_('COM_COMARQUAGE_LOCAL_ADMIN_HINT'); ?></p>
+                    </div>
+                    <div class="mt-3">
                         <button class="btn btn-outline-primary" type="submit" onclick="this.form.task.value='useRecommendedSources'">
                             <?php echo Text::_('COM_COMARQUAGE_USE_RECOMMENDED_SOURCES'); ?>
                         </button>

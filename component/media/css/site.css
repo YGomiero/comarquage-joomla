@@ -20,7 +20,7 @@
 .comarquage-hero {
     background:
         radial-gradient(circle at 88% 12%, rgba(0, 166, 200, .22), transparent 30%),
-        linear-gradient(135deg, #063a4c 0%, #006f8d 58%, #e9f8fb 58%, #f7fbfc 100%);
+        linear-gradient(135deg, #063a4c 0%, #006f8d 58%, #096c80 58%, #0e586b 100%);
     color: #fff;
     display: grid;
     gap: 1.5rem;
@@ -1276,3 +1276,5 @@ body.com-comarquage[data-bs-theme="dark"] .sidebar-right-position,
     border-color: #2f7688;
     color: #fff;
 }
+
+.comarquage-local{margin:2rem 0;padding:1.4rem;border:1px solid #ccdeda;border-radius:12px;background:#f5faf8;color:#183d43}.comarquage-local h2{font-size:1.35rem}.comarquage-local ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.7rem;list-style:none;padding:0}.comarquage-local a{text-decoration:underline}.comarquage-commune{font-weight:700}

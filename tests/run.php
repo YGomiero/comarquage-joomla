@@ -70,5 +70,13 @@ namespace {
     check($first->acquire() && !$second->acquire(),'Concurrent import rejected'); $first->release();$second->release();
     check($second->acquire(),'Lock released');$second->release();
     foreach (glob($base.'/*') as $file) { unlink($file); } rmdir($base);
+    $validator = new \Joomla\Component\Comarquage\Administrator\Service\CommuneValidator();
+    check($validator->isValidFormat('62119') && $validator->isValidFormat('2A004') && !$validator->isValidFormat('ABCDE'), 'INSEE mainland and Corsican formats');
+    $record=['id'=>'demo','nom'=>'Mairie','pivot'=>'[{"type_service_local":"mairie"}]','code_insee_commune'=>'62119','url_service_public'=>'https://lannuaire.service-public.gouv.fr/hauts-de-france/pas-de-calais/demo'];
+    $localClass=\Joomla\Component\Comarquage\Administrator\Service\LocalContextService::class;
+    check($localClass::normalise($record,'62119')['type']==='mairie', 'Official local service normalisation');
+    check($localClass::normalise($record,'75056')===null, 'Foreign municipality excluded');
+    $record['url_service_public']='javascript:alert(1)';
+    check($localClass::normalise($record,'62119')===null, 'Unsafe directory links rejected');
     echo "$count regression checks passed.\n";
 }

@@ -12,7 +12,7 @@ class CommuneValidator
 {
     public function isValidFormat(string $code): bool
     {
-        return (bool) preg_match('/^[A-Za-z0-9]{5}$/', $code);
+        return (bool) preg_match('/^(?:[0-9]{5}|2[AB][0-9]{3})$/iD', $code);
     }
 
     public function exists(string $code): ?bool

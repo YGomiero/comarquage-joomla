@@ -1,4 +1,4 @@
-# Comarquage
+# Comarquage — Service-Public Open Data
 
 ![Comarquage — Service-Public Open Data](docs/comarquage-banner.svg)
 
@@ -9,6 +9,26 @@
 Comarquage importe les données ouvertes officielles dans votre base Joomla, puis affiche les fiches, les thèmes et la recherche sur votre site. Il réunit un composant, un plugin de tâches planifiées et un plugin de recherche avancée dans un seul package.
 
 Comarquage imports official French public-service Open Data into Joomla and provides topic browsing, record pages and local search. One package includes the component, scheduled import and Smart Search plugins.
+
+## À qui s’adresse Comarquage ?
+
+L’extension s’adresse aux **mairies, intercommunalités et autres organismes publics locaux** disposant d’un site Joomla, ainsi qu’aux agences et intégrateurs qui les accompagnent. Elle permet de proposer un espace de démarches aux trois publics :
+
+- **Particuliers** : famille, papiers, logement, travail, santé et vie quotidienne.
+- **Associations** : création, fonctionnement, bénévolat, financement et obligations.
+- **Entreprises** : création, gestion, fiscalité, emploi et formalités professionnelles.
+
+Les trois rubriques peuvent être activées séparément et possèdent leurs propres liens de menu. Comarquage diffuse l’information et renvoie vers les services officiels pour effectuer les démarches ; ce n’est pas un téléservice de dépôt de dossier.
+
+## Who is Comarquage for?
+
+Comarquage is designed for **French municipalities, intermunicipal authorities and other local public bodies** using Joomla, and for their web agencies and integrators. It provides information for three audiences:
+
+- **Individuals**: family, identity documents, housing, work, health and everyday life.
+- **Associations**: creation, governance, volunteering, funding and obligations.
+- **Businesses**: starting a business, management, taxation, employment and formalities.
+
+Each section can be enabled separately and has its own menu item type. The extension publishes information and links to official services; it does not itself accept administrative applications.
 
 ## Compatibility
 

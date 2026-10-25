@@ -38,6 +38,17 @@ class DisplayController extends BaseController
         $this->setRedirect('index.php?option=com_comarquage');
     }
 
+    public function refreshLocalInfo(): void
+    {
+        $this->checkToken();
+        $this->requireManage();
+        try {
+            $count = (new \Joomla\Component\Comarquage\Administrator\Service\LocalContextService(Factory::getContainer()->get(DatabaseInterface::class)))->refresh(true);
+            $this->setMessage(Text::sprintf('COM_COMARQUAGE_LOCAL_REFRESHED', $count), 'message');
+        } catch (\Throwable $e) { $this->setMessage($e->getMessage(), 'warning'); }
+        $this->setRedirect('index.php?option=com_comarquage');
+    }
+
     /** Run a bounded batch; the next request resumes at the saved cursor. */
     public function importNow(): void
     {

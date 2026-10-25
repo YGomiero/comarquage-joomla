@@ -8,6 +8,16 @@ Comarquage rediffuse les fiches administratives ouvertes de Service-Public / DIL
 
 Le package conserve les identifiants historiques `pkg_comarquage` et `com_comarquage`, ce qui permet la mise à niveau d’une installation existante sans créer un second composant.
 
+## À qui s’adresse Comarquage ?
+
+L’extension s’adresse aux **mairies, intercommunalités et autres organismes publics locaux** disposant d’un site Joomla, ainsi qu’aux agences et intégrateurs qui les accompagnent. Elle permet de proposer un espace de démarches aux trois publics :
+
+- **Particuliers** : famille, papiers, logement, travail, santé et vie quotidienne.
+- **Associations** : création, fonctionnement, bénévolat, financement et obligations.
+- **Entreprises** : création, gestion, fiscalité, emploi et formalités professionnelles.
+
+Les trois rubriques peuvent être activées séparément et possèdent leurs propres liens de menu. Comarquage diffuse l’information et renvoie vers les services officiels pour effectuer les démarches ; ce n’est pas un téléservice de dépôt de dossier.
+
 ## Prérequis et installation
 
 Joomla 6.x, PHP 8.3 ou supérieur, base MySQL/MariaDB compatible Joomla, extensions PHP DOM, mbstring et ZIP. Prévoir 256 Mo de mémoire PHP au minimum, 512 Mo conseillés pour les gros imports, de l’espace temporaire et une connexion HTTPS sortante vers les sources DILA.
@@ -55,7 +65,16 @@ La recherche du composant est alimentée pendant les imports. Pour la **recherch
 
 Plusieurs thèmes visuels sont fournis. Un administrateur autorisé à configurer le composant peut créer une copie personnalisée ou importer/exporter un thème JSON. Les substitutions de vues Joomla restent possibles. Les informations administratives officielles restent en français, même si l’administration Joomla est en anglais.
 
-Le code INSEE et le nom de commune constituent un contexte local. Comarquage ne promet pas la localisation automatique de chaque démarche ni une synchronisation complète de l’annuaire administratif local.
+### Tester une commune et ses menus
+
+Dans les paramètres, saisir le **code INSEE** (pas le code postal), le nom de commune et activer la personnalisation locale. Exemple vérifiable : **Béthune — 62119** ; son code postal 62400 n’est pas le code à saisir. Puis cliquer sur **Actualiser les services de la commune** dans le tableau de bord. Cette vérification interroge l’API officielle de l’annuaire DILA ; un code de bon format ne garantit pas à lui seul l’existence d’une commune.
+
+Le nom et le code apparaissent en tête des trois rubriques. Un bloc présente une sélection de services implantés dans cette commune, adaptée aux particuliers, associations ou entreprises, avec des liens vers leurs fiches officielles. Les coordonnées restent consultables sur l’annuaire officiel. La compétence territoriale des services situés ailleurs n’est pas calculée. Les textes nationaux des démarches restent inchangés.
+
+Le contexte est optionnel. Les imports renouvellent aussi les contacts, au plus une fois par jour ; le bouton manuel force l’actualisation. Aucune requête vers l’annuaire n’est faite lors de la visite d’une page. Une erreur conserve le dernier annuaire valide et est inscrite au journal.
+
+Créer dans **Menus → Menu principal → Nouveau** quatre liens de type Comarquage : **Particuliers**, **Associations**, **Entreprises**, **Recherche**. Publier les liens avec l’accès Public ; publier un module Menu associé si le template n’affiche pas déjà ce menu. Les liens restent gérés par Joomla, et ne sont pas créés automatiquement sur chaque installation.
+
 
 ## Mise à jour de l’extension
 

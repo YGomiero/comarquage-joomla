@@ -37,3 +37,7 @@ The parser retains source URL and editorial date. The public renderer applies a 
 No remote telemetry, account or API key is required. Outbound requests serve configured public-data imports and Joomla's normal extension update checks. The package does not run shell commands or create scheduled OS tasks. The administrator must arrange reliable Joomla Scheduler execution.
 
 FR : l’import et son curseur sont validés ensemble par lot ; les suppressions du flux sont prises en compte uniquement en fin d’import complet. Les publications DILA restent en français. Les traductions concernent l’extension et sa documentation.
+
+## Municipal context
+
+`LocalContextService` optionally queries the DILA directory by INSEE code during imports (24-hour refresh) or through a CSRF-protected administrator action. It fetches paginated records before replacing that commune’s snapshot in a transaction. Public pages only read the database, filter relevant service types per audience and link to official directory records. It identifies physical location, not territorial jurisdiction. Failed refreshes preserve the previous snapshot.

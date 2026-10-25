@@ -15,3 +15,5 @@
 - Daily scheduler defaults; original vector artwork and cleaned package structure.
 
 FR : première version maintenue ; reprise des imports, sources actuelles, associations à jour, mises à jour Joomla, documentation bilingue et durcissement du traitement des données.
+
+- Contexte communal INSEE : import de l’annuaire DILA, contacts adaptés aux trois publics et conservation du dernier résultat valide.

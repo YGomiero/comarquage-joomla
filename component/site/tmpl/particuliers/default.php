@@ -163,6 +163,10 @@ $panelThemeAliases = [
                 <i class="fa-solid fa-landmark" aria-hidden="true"></i>
                 <span>Service-Public.gouv.fr</span>
             </a>
+            <?php $municipalityParams = Joomla\CMS\Component\ComponentHelper::getParams('com_comarquage'); ?>
+            <?php if ((int) $municipalityParams->get('activer_personnalisation_locale', 0) && preg_match('/^(?:[0-9]{5}|2[AB][0-9]{3})$/iD', (string) $municipalityParams->get('code_insee', ''))) : ?>
+            <p class="comarquage-commune"><?php echo $this->escape($municipalityParams->get('nom_commune', '') . ' — INSEE ' . strtoupper($municipalityParams->get('code_insee'))); ?></p>
+            <?php endif; ?>
             <h1><?php echo Text::_('COM_COMARQUAGE_' . strtoupper($this->rubrique)); ?></h1>
             <p><?php echo $this->escape($heroCopy[$this->rubrique] ?? Text::_('COM_COMARQUAGE_OPEN_DATA_LABEL')); ?></p>
         </div>
@@ -332,6 +336,7 @@ $panelThemeAliases = [
             <?php endforeach; ?>
         </section>
     <?php endif; ?>
+    <?php include JPATH_COMPONENT . '/tmpl/common/local.php'; ?>
     <?php include JPATH_COMPONENT . '/tmpl/common/signature.php'; ?>
 </div>
 

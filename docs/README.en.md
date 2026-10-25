@@ -8,6 +8,16 @@ Comarquage displays French administrative information from Service-Public / DILA
 
 The package retains the historical `pkg_comarquage` and `com_comarquage` identifiers so an existing installation can be upgraded in place.
 
+## Who is Comarquage for?
+
+Comarquage is designed for **French municipalities, intermunicipal authorities and other local public bodies** using Joomla, and for their web agencies and integrators. It provides information for three audiences:
+
+- **Individuals**: family, identity documents, housing, work, health and everyday life.
+- **Associations**: creation, governance, volunteering, funding and obligations.
+- **Businesses**: starting a business, management, taxation, employment and formalities.
+
+Each section can be enabled separately and has its own menu item type. The extension publishes information and links to official services; it does not itself accept administrative applications.
+
 ## Requirements and installation
 
 Joomla 6.x, PHP 8.3+, a Joomla-supported MySQL/MariaDB database, PHP DOM, mbstring and ZIP. Allow at least 256 MiB PHP memory; 512 MiB is recommended for large imports. The server needs temporary disk space and outbound HTTPS access to DILA.
@@ -56,6 +66,16 @@ The component's local search index is updated during imports. Joomla **Smart Sea
 Several visual themes are included. Administrators with component configuration permission can save customized copies or import/export JSON themes. Joomla template overrides remain available. Administrative source content remains French, including when the Joomla administration language is English.
 
 The municipality name and INSEE code provide local context. Comarquage does not promise automatic localization of every procedure or full synchronization of the local public-administration directory.
+
+### Test a municipality and its menus
+
+In the options, enter the **INSEE municipality code**, the municipality name, and enable local customisation. Example: **Béthune — 62119** (not its postal code 62400). Click **Refresh municipal services** on the dashboard to query the official DILA directory. A valid code format alone does not prove that a municipality exists.
+
+The municipality name and code appear on all three sections. A local block selects services located in that municipality for each audience and links to their official directory records. This does not resolve the jurisdiction of services located elsewhere or modify national procedure texts.
+
+The feature is optional. Imports refresh contacts at most once daily; the manual button forces a refresh. Visitor pages make no live directory API requests. Failed refreshes preserve previous contacts and are logged.
+
+Create four published Public menu items in **Menus → Main Menu → New**, using Comarquage's **Individuals**, **Associations**, **Businesses** and **Search** types. Publish the corresponding Menu module when needed by your template. Menus are managed by Joomla and are not automatically added to every installation.
 
 ## Extension updates
 

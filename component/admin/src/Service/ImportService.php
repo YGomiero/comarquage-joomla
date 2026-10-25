@@ -128,6 +128,8 @@ final class ImportService
                     $logger->log('import.' . $universe, 'error', ['message' => $e->getMessage()]);
                 }
             }
+            try { (new LocalContextService($this->db))->refresh(); }
+            catch (\Throwable $e) { $logger->log('local_context', 'warning', ['message' => $e->getMessage()]); }
             $logger->log('import', 'summary', $summary);
             (new CacheService())->clear();
             return $summary;

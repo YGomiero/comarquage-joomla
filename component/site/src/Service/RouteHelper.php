@@ -25,7 +25,9 @@ class RouteHelper
             $query['Itemid'] = $itemid;
         }
 
-        return Route::_('index.php?' . http_build_query($query, '', '&', PHP_QUERY_RFC3986), false);
+        $url = 'index.php?' . http_build_query($query, '', '&', PHP_QUERY_RFC3986);
+        // Finder indexes raw site routes in administrator/CLI contexts.
+        return Factory::getApplication()->isClient('site') ? (Route::_($url, false) ?? $url) : $url;
     }
 
     public static function getFicheRoute(int|string $id, string $universe = 'particuliers', array $query = [], string $language = '*'): string
