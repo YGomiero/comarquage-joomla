@@ -29,7 +29,7 @@ $formatDate = static fn($s) => $s && strtotime($s) !== false ? gmdate('d/m/Y', s
   <?php if (!empty($feed['last_imported'])) : ?>
   <span><?php echo $escape(Text::_('COM_COMARQUAGE_LOCAL_IMPORT')); ?> <?php echo $escape($formatDate($feed['last_imported'])); ?></span>
   <?php endif; ?>
-  <span><a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence/" rel="external noopener">Licence Ouverte 2.0</a> · Distro</span>
+  <span><a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence/" rel="external noopener">Licence Ouverte 2.0</a> · Comarquage</span>
   <?php if (!empty($payload['source_url']) && preg_match('~^https://(?:www\.)?(?:entreprendre\.)?service-public\.gouv\.fr/~', $payload['source_url'])) : ?>
   <span><a href="<?php echo $escape($payload['source_url']); ?>" rel="external noopener"><?php echo $escape(Text::_('COM_COMARQUAGE_ORIGINAL_RECORD')); ?></a></span>
   <?php endif; ?>

@@ -11,7 +11,7 @@ final class SourceStorageService
 {
     public static function workspace(): string
     {
-        $path = sys_get_temp_dir() . '/distro_' . substr(hash('sha256', JPATH_ROOT), 0, 16);
+        $path = sys_get_temp_dir() . '/comarquage_' . substr(hash('sha256', JPATH_ROOT), 0, 16);
         if (!is_dir($path) && !mkdir($path, 0700, true) && !is_dir($path)) {
             throw new \RuntimeException('Cannot create the import workspace.');
         }

@@ -25,7 +25,7 @@ namespace {
         if (!$condition) { throw new \RuntimeException($message); }
         $count++;
     }
-    $base = sys_get_temp_dir() . '/distro_test_' . bin2hex(random_bytes(6));
+    $base = sys_get_temp_dir() . '/comarquage_test_' . bin2hex(random_bytes(6));
     mkdir($base);
     $xml = '<Publication xmlns:dc="http://purl.org/dc/elements/1.1/" ID="F100" spUrl="https://www.service-public.gouv.fr/particuliers/vosdroits/F100" futureAttribute="accepted"><dc:title>Association test</dc:title><dc:date>modified 2026-10-25</dc:date><Theme ID="N31931"><Titre>Associations</Titre></Theme><Texte><Paragraphe>Texte <MiseEnEvidence>important</MiseEnEvidence><LienExterne URL="javascript:alert(1)">danger</LienExterne></Paragraphe><NewBlock>Future content</NewBlock></Texte></Publication>';
     $file = $base . '/record.xml'; file_put_contents($file, $xml);

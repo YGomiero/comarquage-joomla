@@ -1,10 +1,10 @@
-# English guide — Distro
+# English guide — Comarquage
 
 [Home](../README.md) · [Français](README.fr.md)
 
 ## Purpose
 
-Distro displays French administrative information from Service-Public / DILA Open Data within Joomla. Visitors browse topics, read records and search the local database. Public pages do not download or parse remote XML.
+Comarquage displays French administrative information from Service-Public / DILA Open Data within Joomla. Visitors browse topics, read records and search the local database. Public pages do not download or parse remote XML.
 
 The package retains the historical `pkg_comarquage` and `com_comarquage` identifiers so an existing installation can be upgraded in place.
 
@@ -15,9 +15,9 @@ Joomla 6.x, PHP 8.3+, a Joomla-supported MySQL/MariaDB database, PHP DOM, mbstri
 1. Back up the site and database before upgrading.
 2. Download `pkg_comarquage-1.0.0.zip` from the GitHub release assets.
 3. Upload it through **System → Install → Extensions**.
-4. Open **Components → Distro → Options** and check the enabled audiences and sources.
+4. Open **Components → Comarquage → Options** and check the enabled audiences and sources.
 5. Run the import. Keep the dashboard open until it finishes. If interrupted, run it again: it resumes from the last committed batch.
-6. Create menu items for Distro's Individuals, Associations, Businesses or Search views.
+6. Create menu items for Comarquage's Individuals, Associations, Businesses or Search views.
 
 On first installation the package enables its task and Smart Search plugins. Upgrades preserve plugin states and existing settings. Create scheduled tasks separately from the dashboard.
 
@@ -55,19 +55,19 @@ The component's local search index is updated during imports. Joomla **Smart Sea
 
 Several visual themes are included. Administrators with component configuration permission can save customized copies or import/export JSON themes. Joomla template overrides remain available. Administrative source content remains French, including when the Joomla administration language is English.
 
-The municipality name and INSEE code provide local context. Distro does not promise automatic localization of every procedure or full synchronization of the local public-administration directory.
+The municipality name and INSEE code provide local context. Comarquage does not promise automatic localization of every procedure or full synchronization of the local public-administration directory.
 
 ## Extension updates
 
 The package update server is:
 
-`https://github.com/YGomiero/distro-joomla/releases/latest/download/update.xml`
+`https://github.com/YGomiero/comarquage-joomla/releases/latest/download/update.xml`
 
 Joomla checks new versions under **System → Update → Extensions**. The feed references an immutable versioned ZIP and its SHA-256 digest. Published release files are not replaced; fixes receive a new version. Code updates and daily data imports are separate operations.
 
 ## Attribution, limitations and troubleshooting
 
-DILA data is licensed under [Open Licence 2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/). Preserve the attribution, complete download URL, file name and file date. Distro's footer provides these for remote imports. Follow the publisher's dataset discussions for announced corrections and changes.
+DILA data is licensed under [Open Licence 2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/). Preserve the attribution, complete download URL, file name and file date. Comarquage's footer provides these for remote imports. Follow the publisher's dataset discussions for announced corrections and changes.
 
 Rendering supports common COPERIA 3.5 publications, text, lists, tables, resources and conditional paths. It is not a certified reproduction of every official portal feature. An original-record link is available for verification.
 
@@ -75,6 +75,6 @@ Rendering supports common COPERIA 3.5 publications, text, lists, tables, resourc
 - **Network error:** check DNS, certificates, outbound HTTPS and DILA availability.
 - **No results:** verify enabled audiences, complete the import and clear the component cache.
 - **Old Smart Search results:** run Joomla's indexer after importing.
-- **Missing code update:** check that the Distro update site is enabled, then refresh Joomla's update check.
+- **Missing code update:** check that the Comarquage update site is enabled, then refresh Joomla's update check.
 
-Uninstalling the package removes the component, plugins and imported-data tables. Back up any required data before uninstalling. Request help through [GitHub issues](https://github.com/YGomiero/distro-joomla/issues), including Joomla/PHP versions and an error message stripped of private information.
+Uninstalling the package removes the component, plugins and imported-data tables. Back up any required data before uninstalling. Request help through [GitHub issues](https://github.com/YGomiero/comarquage-joomla/issues), including Joomla/PHP versions and an error message stripped of private information.

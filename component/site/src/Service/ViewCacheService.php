@@ -1,6 +1,6 @@
 <?php
 /**
- * Distro — Service-Public Open Data for Joomla.
+ * Comarquage — Service-Public Open Data for Joomla.
  * @copyright (C) 2026 Yann Gomiero
  * @license GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -59,7 +59,7 @@ class ViewCacheService
         $params = ComponentHelper::getParams('com_comarquage');
         $keys = ['option', 'view', 'id', 'theme', 'subtheme', 'q', 'start', 'limitstart', 'Itemid', 'return'];
         $parts = [
-            'view_cache_schema=distro-1.0.0-v2',
+            'view_cache_schema=comarquage-1.0.0-v2',
             'language=' . Factory::getApplication()->getLanguage()->getTag(),
             'params=' . hash('sha256', $params->toString()),
             'layout_theme=' . (string) $params->get('layout_theme', 'default'),

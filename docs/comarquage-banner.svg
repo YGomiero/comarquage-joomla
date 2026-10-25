@@ -4,7 +4,7 @@
 <rect width="1024" height="448" fill="#f5f4ee"/>
 <path d="M0 0h580l-92 448H0z" fill="url(#bg)"/>
 <circle cx="58" cy="52" r="5" fill="#69d7cb"/><text x="75" y="57" font-family="Arial,sans-serif" font-size="13" font-weight="bold" letter-spacing="2" fill="#c8eeea">JOOMLA · OPEN DATA</text>
-<text x="54" y="164" font-family="Arial,sans-serif" font-weight="bold" font-size="82" letter-spacing="-3" fill="white">Distro</text>
+<text x="54" y="164" font-family="Arial,sans-serif" font-weight="bold" font-size="60" letter-spacing="-2" fill="white">Comarquage</text>
 <text x="58" y="212" font-family="Arial,sans-serif" font-size="25" fill="#e5f1f2">Les démarches publiques,</text><text x="58" y="247" font-family="Arial,sans-serif" font-size="25" fill="#e5f1f2">au cœur de votre site.</text>
 <path d="M58 282h54" stroke="#69d7cb" stroke-width="4"/>
 <text x="58" y="323" font-family="Arial,sans-serif" font-size="16" fill="#c9e1e5">Service-Public / DILA</text><text x="58" y="350" font-family="Arial,sans-serif" font-size="15" fill="#c9e1e5">Import · Recherche · Mises à jour</text>

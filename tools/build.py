@@ -40,10 +40,10 @@ blob = archive(package)
 sha = hashlib.sha256(blob).hexdigest()
 feed = f'''<?xml version="1.0" encoding="utf-8"?>
 <updates><update>
- <name>Distro</name><description>Service-Public / DILA Open Data for Joomla</description>
+ <name>Comarquage</name><description>Service-Public / DILA Open Data for Joomla</description>
  <element>pkg_comarquage</element><type>package</type><version>{VERSION}</version>
- <infourl title="Distro">https://github.com/YGomiero/distro-joomla/releases/tag/{VERSION}</infourl>
- <downloads><downloadurl type="full" format="zip">https://github.com/YGomiero/distro-joomla/releases/download/{VERSION}/{name}</downloadurl></downloads>
+ <infourl title="Comarquage">https://github.com/YGomiero/comarquage-joomla/releases/tag/{VERSION}</infourl>
+ <downloads><downloadurl type="full" format="zip">https://github.com/YGomiero/comarquage-joomla/releases/download/{VERSION}/{name}</downloadurl></downloads>
  <tags><tag>stable</tag></tags><targetplatform name="joomla" version="6\\.[0-9]+"/>
  <php_minimum>8.3</php_minimum><sha256>{sha}</sha256>
 </update></updates>

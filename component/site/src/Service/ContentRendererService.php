@@ -1,6 +1,6 @@
 <?php
 /**
- * Distro — Service-Public Open Data for Joomla.
+ * Comarquage — Service-Public Open Data for Joomla.
  * @copyright (C) 2026 Yann Gomiero
  * @license GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -139,7 +139,7 @@ class ContentRendererService
     {
         $previous = libxml_use_internal_errors(true);
         $dom = new \DOMDocument();
-        $dom->loadHTML('<?xml encoding="UTF-8"><div id="distro-content-root">' . $html . '</div>', LIBXML_NONET | LIBXML_NOERROR | LIBXML_NOWARNING);
+        $dom->loadHTML('<?xml encoding="UTF-8"><div id="comarquage-content-root">' . $html . '</div>', LIBXML_NONET | LIBXML_NOERROR | LIBXML_NOWARNING);
         libxml_clear_errors();
         libxml_use_internal_errors($previous);
         $allowed = ['div','section','details','summary','button','span','i','p','strong','em','var','q','sup','sub','abbr','ul','ol','li','aside','h2','h3','h4','h5','a','small','table','caption','tbody','thead','tr','th','td','br'];
@@ -163,7 +163,7 @@ class ContentRendererService
             }
         }
         $html = '';
-        $root = $dom->getElementById('distro-content-root');
+        $root = $dom->getElementById('comarquage-content-root');
         if ($root) {
             foreach ($root->childNodes as $child) { $html .= $dom->saveHTML($child); }
         }

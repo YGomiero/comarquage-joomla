@@ -1,4 +1,4 @@
-/** Distro imports: bounded requests, persisted cursor and visible progress.
+/** Comarquage imports: bounded requests, persisted cursor and visible progress.
  * @copyright (C) 2026 Yann Gomiero
  * @license GNU General Public License version 2 or later; see LICENSE.txt
  */

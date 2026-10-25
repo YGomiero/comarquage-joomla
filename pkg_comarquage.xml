@@ -4,13 +4,13 @@
     <packagename>comarquage</packagename>
     <author>Yann Gomiero</author>
     <authorEmail>extensions@gomiero.me</authorEmail>
-    <authorUrl>https://github.com/YGomiero/distro-joomla</authorUrl>
+    <authorUrl>https://github.com/YGomiero/comarquage-joomla</authorUrl>
     <creationDate>2026-10</creationDate>
     <copyright>(C) 2026 Yann Gomiero</copyright>
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <version>1.0.0</version>
     <packager>Yann Gomiero</packager>
-    <packagerurl>https://github.com/YGomiero/distro-joomla</packagerurl>
+    <packagerurl>https://github.com/YGomiero/comarquage-joomla</packagerurl>
     <description>PKG_COMARQUAGE_DESCRIPTION</description>
     <scriptfile>script.php</scriptfile>
     <blockChildUninstall>true</blockChildUninstall>
@@ -23,5 +23,5 @@
         <language tag="fr-FR">fr-FR/pkg_comarquage.sys.ini</language>
         <language tag="en-GB">en-GB/pkg_comarquage.sys.ini</language>
     </languages>
-    <updateservers><server type="extension" priority="1" name="Distro — GitHub releases">https://github.com/YGomiero/distro-joomla/releases/latest/download/update.xml</server></updateservers>
+    <updateservers><server type="extension" priority="1" name="Comarquage — GitHub releases">https://github.com/YGomiero/comarquage-joomla/releases/latest/download/update.xml</server></updateservers>
 </extension>

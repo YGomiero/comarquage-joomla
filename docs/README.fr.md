@@ -1,10 +1,10 @@
-# Guide français — Distro
+# Guide français — Comarquage
 
 [Accueil](../README.md) · [English](README.en.md)
 
 ## Ce que fait l’extension
 
-Distro rediffuse les fiches administratives ouvertes de Service-Public / DILA sur un site Joomla. Le visiteur parcourt les thèmes, consulte une fiche ou effectue une recherche locale. Les fiches sont stockées dans la base Joomla : leur affichage ne déclenche pas de téléchargement XML.
+Comarquage rediffuse les fiches administratives ouvertes de Service-Public / DILA sur un site Joomla. Le visiteur parcourt les thèmes, consulte une fiche ou effectue une recherche locale. Les fiches sont stockées dans la base Joomla : leur affichage ne déclenche pas de téléchargement XML.
 
 Le package conserve les identifiants historiques `pkg_comarquage` et `com_comarquage`, ce qui permet la mise à niveau d’une installation existante sans créer un second composant.
 
@@ -15,9 +15,9 @@ Joomla 6.x, PHP 8.3 ou supérieur, base MySQL/MariaDB compatible Joomla, extensi
 1. Sauvegarder le site et sa base avant une mise à niveau.
 2. Télécharger le fichier `pkg_comarquage-1.0.0.zip` joint à la release GitHub.
 3. Dans Joomla, ouvrir **Système → Installation → Extensions**, puis déposer ce ZIP.
-4. Ouvrir **Composants → Distro → Paramètres** pour vérifier les sources et les univers activés.
+4. Ouvrir **Composants → Comarquage → Paramètres** pour vérifier les sources et les univers activés.
 5. Lancer **Relancer l’import**. Garder la page ouverte jusqu’à la fin. En cas d’arrêt, relancer : le traitement reprend au dernier lot validé.
-6. Créer un lien de menu de type **Distro → Particuliers**, **Associations**, **Entreprises** ou **Recherche**.
+6. Créer un lien de menu de type **Comarquage → Particuliers**, **Associations**, **Entreprises** ou **Recherche**.
 
 Le package installe et active les plugins de tâches planifiées et de recherche avancée lors d’une première installation. Une mise à jour préserve leurs états et les paramètres existants. Les tâches automatiques doivent être créées depuis le tableau de bord.
 
@@ -55,19 +55,19 @@ La recherche du composant est alimentée pendant les imports. Pour la **recherch
 
 Plusieurs thèmes visuels sont fournis. Un administrateur autorisé à configurer le composant peut créer une copie personnalisée ou importer/exporter un thème JSON. Les substitutions de vues Joomla restent possibles. Les informations administratives officielles restent en français, même si l’administration Joomla est en anglais.
 
-Le code INSEE et le nom de commune constituent un contexte local. Distro ne promet pas la localisation automatique de chaque démarche ni une synchronisation complète de l’annuaire administratif local.
+Le code INSEE et le nom de commune constituent un contexte local. Comarquage ne promet pas la localisation automatique de chaque démarche ni une synchronisation complète de l’annuaire administratif local.
 
 ## Mise à jour de l’extension
 
 Le serveur de mise à jour du package est :
 
-`https://github.com/YGomiero/distro-joomla/releases/latest/download/update.xml`
+`https://github.com/YGomiero/comarquage-joomla/releases/latest/download/update.xml`
 
 Joomla détecte les nouvelles versions dans **Système → Mise à jour → Extensions**. Le flux désigne un ZIP versionné et son empreinte SHA-256. Un package publié n’est pas remplacé : une correction donne lieu à une nouvelle version.
 
 ## Attribution, limites et dépannage
 
-Les contenus DILA sont sous [Licence Ouverte 2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/). Conserver la source, l’URL complète de téléchargement, le nom et la date du fichier. Le pied de page Distro fournit ces indications pour les imports distants. Consulter les discussions des jeux de données DILA pour suivre les corrections et changements annoncés.
+Les contenus DILA sont sous [Licence Ouverte 2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/). Conserver la source, l’URL complète de téléchargement, le nom et la date du fichier. Le pied de page Comarquage fournit ces indications pour les imports distants. Consulter les discussions des jeux de données DILA pour suivre les corrections et changements annoncés.
 
 Le rendu couvre les publications, textes, listes, tableaux, ressources et parcours conditionnels courants de COPERIA 3.5. Il ne constitue pas une reproduction certifiée de l’ensemble du portail officiel. Pour une information décisive, le lien vers la fiche officielle reste disponible.
 
@@ -75,6 +75,6 @@ Le rendu couvre les publications, textes, listes, tableaux, ressources et parcou
 - **Erreur réseau :** vérifier DNS, certificats, accès HTTPS sortant et disponibilité DILA.
 - **Aucun résultat :** vérifier les univers, terminer l’import et vider le cache du composant.
 - **Recherche avancée ancienne :** lancer l’indexeur Joomla après l’import.
-- **Mise à jour absente :** vérifier que le serveur Distro est activé puis actualiser la recherche de mises à jour Joomla.
+- **Mise à jour absente :** vérifier que le serveur Comarquage est activé puis actualiser la recherche de mises à jour Joomla.
 
-La désinstallation du package supprime le composant, ses plugins et les tables de données importées. Sauvegarder les données utiles avant de désinstaller. Pour le support, ouvrir une [issue GitHub](https://github.com/YGomiero/distro-joomla/issues) avec les versions Joomla/PHP et un message d’erreur expurgé des informations privées.
+La désinstallation du package supprime le composant, ses plugins et les tables de données importées. Sauvegarder les données utiles avant de désinstaller. Pour le support, ouvrir une [issue GitHub](https://github.com/YGomiero/comarquage-joomla/issues) avec les versions Joomla/PHP et un message d’erreur expurgé des informations privées.

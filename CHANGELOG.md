@@ -2,7 +2,7 @@
 
 ## 1.0.0 — 2026-10-25
 
-- First maintained Distro package, based on the local 0.2.32 component.
+- First maintained Comarquage package, based on the local 0.2.32 component.
 - Unified component, scheduled import and Smart Search installation.
 - Joomla update server, deterministic ZIP build and SHA-256 release checksums.
 - Complete author, license, support and version metadata; French/English guides.

@@ -17,12 +17,12 @@ class pkg_comarquageInstallerScript
     {
         if ($type === 'uninstall') { return true; }
         if (version_compare(PHP_VERSION, '8.3', '<') || version_compare(Version::MAJOR_VERSION . '.' . Version::MINOR_VERSION, '6.0', '<') || Version::MAJOR_VERSION >= 7) {
-            Factory::getApplication()->enqueueMessage('Distro requires Joomla 6.x and PHP 8.3 or later.', 'error');
+            Factory::getApplication()->enqueueMessage('Comarquage requires Joomla 6.x and PHP 8.3 or later.', 'error');
             return false;
         }
         foreach (['dom', 'mbstring', 'zip'] as $extension) {
             if (!extension_loaded($extension)) {
-                Factory::getApplication()->enqueueMessage('Distro requires PHP extension: ' . $extension, 'error');
+                Factory::getApplication()->enqueueMessage('Comarquage requires PHP extension: ' . $extension, 'error');
                 return false;
             }
         }
