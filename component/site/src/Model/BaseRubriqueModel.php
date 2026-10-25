@@ -986,7 +986,10 @@ abstract class BaseRubriqueModel extends BaseDatabaseModel
 
     private function getHomePanelsCacheFile(): string
     {
-        return $this->getCacheDirectory() . '/home_v9_' . preg_replace('/[^a-z0-9_-]/', '', $this->rubrique) . '.json';
+        // Panels contain routed URLs, so they must not be shared across languages or menu contexts.
+        $app = Factory::getApplication();
+        $context = [$this->rubrique, $app->getLanguage()->getTag(), $app->getInput()->getInt('Itemid'), $app->getIdentity()->getAuthorisedViewLevels()];
+        return $this->getCacheDirectory() . '/home_v10_' . hash('sha256', json_encode($context)) . '.json';
     }
 
     private function getListCacheKey(string $type): string

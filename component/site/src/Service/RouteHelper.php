@@ -16,10 +16,10 @@ class RouteHelper
 {
     private static array $itemids = [];
 
-    public static function getViewRoute(string $view, array $query = []): string
+    public static function getViewRoute(string $view, array $query = [], string $language = '*'): string
     {
         $query = ['option' => 'com_comarquage', 'view' => $view] + $query;
-        $itemid = self::getItemid($view);
+        $itemid = self::getItemid($view, $language);
 
         if ($itemid > 0) {
             $query['Itemid'] = $itemid;
@@ -32,7 +32,7 @@ class RouteHelper
 
     public static function getFicheRoute(int|string $id, string $universe = 'particuliers', array $query = [], string $language = '*'): string
     {
-        return self::getViewRoute($universe, ['id' => (string) $id] + $query);
+        return self::getViewRoute($universe, ['id' => (string) $id] + $query, $language);
     }
 
     public static function getReturnToken(): string
@@ -77,26 +77,52 @@ class RouteHelper
         return $uri->toString();
     }
 
-    private static function getItemid(string $view): int
+    private static function getItemid(string $view, string $language): int
     {
-        if (array_key_exists($view, self::$itemids)) {
-            return self::$itemids[$view];
+        $app = Factory::getApplication();
+        $site = $app->isClient('site');
+        if ($language === '*' && $site) {
+            $language = $app->getLanguage()->getTag();
+        }
+        $activeId = $site ? (int) ($app->getMenu()->getActive()->id ?? 0) : 0;
+        $levels = $site ? $app->getIdentity()->getAuthorisedViewLevels() : [1];
+        $cacheKey = $view . ':' . $language . ':' . $activeId . ':' . implode(',', $levels);
+        if (array_key_exists($cacheKey, self::$itemids)) {
+            return self::$itemids[$cacheKey];
         }
 
         $db = Factory::getContainer()->get(\Joomla\Database\DatabaseInterface::class);
         $link = 'index.php?option=com_comarquage&view=' . $view;
         $query = $db->getQuery(true)
-            ->select($db->quoteName('id'))
+            ->select($db->quoteName(['id', 'language', 'access']))
             ->from($db->quoteName('#__menu'))
             ->where($db->quoteName('client_id') . ' = 0')
             ->where($db->quoteName('published') . ' = 1')
             ->where($db->quoteName('link') . ' = :link')
-            ->where($db->quoteName('parent_id') . ' = 1')
-            ->order($db->quoteName('id') . ' DESC')
+            ->order($db->quoteName('id') . ' ASC')
             ->bind(':link', $link);
 
-        self::$itemids[$view] = (int) $db->setQuery($query, 0, 1)->loadResult();
+        self::$itemids[$cacheKey] = self::selectMenuItem($db->setQuery($query)->loadAssocList(), $language, $levels, $activeId);
 
-        return self::$itemids[$view];
+        return self::$itemids[$cacheKey];
+    }
+
+    /** Prefer an accessible menu in the requested language, then an all-language fallback. */
+    public static function selectMenuItem(array $items, string $language, array $levels, int $activeId = 0): int
+    {
+        $selected = 0;
+        $bestScore = -1;
+        foreach ($items as $item) {
+            $tag = (string) ($item['language'] ?? '*');
+            if (!in_array((int) $item['access'], array_map('intval', $levels), true) || ($tag !== $language && $tag !== '*')) {
+                continue;
+            }
+            $score = ($tag === $language ? 2 : 0) + ((int) $item['id'] === $activeId ? 1 : 0);
+            if ($score > $bestScore) {
+                $selected = (int) $item['id'];
+                $bestScore = $score;
+            }
+        }
+        return $selected;
     }
 }

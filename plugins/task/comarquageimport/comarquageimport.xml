@@ -7,7 +7,7 @@
     <creationDate>2026-10</creationDate>
     <copyright>(C) 2026 Yann Gomiero</copyright>
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <description>PLG_TASK_COMARQUAGEIMPORT_XML_DESCRIPTION</description>
     <namespace path="src">Joomla\Plugin\Task\Comarquageimport</namespace>
     <files>

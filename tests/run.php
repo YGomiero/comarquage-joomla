@@ -78,5 +78,10 @@ namespace {
     check($localClass::normalise($record,'75056')===null, 'Foreign municipality excluded');
     $record['url_service_public']='javascript:alert(1)';
     check($localClass::normalise($record,'62119')===null, 'Unsafe directory links rejected');
+    $menus=[['id'=>10,'language'=>'*','access'=>1],['id'=>20,'language'=>'fr-FR','access'=>1],['id'=>30,'language'=>'en-GB','access'=>1],['id'=>40,'language'=>'fr-FR','access'=>2]];
+    $routes=\Joomla\Component\Comarquage\Site\Service\RouteHelper::class;
+    check($routes::selectMenuItem($menus,'fr-FR',[1])===20 && $routes::selectMenuItem($menus,'en-GB',[1])===30,'Menu routes respect the current language');
+    check($routes::selectMenuItem($menus,'fr-FR',[1],40)===20 && $routes::selectMenuItem($menus,'fr-FR',[1,2],40)===40,'Menu routes respect access and active menu');
+    check($routes::selectMenuItem($menus,'de-DE',[1])===10 && $routes::selectMenuItem([$menus[2]],'fr-FR',[1])===0,'All-language fallback never selects a foreign-language menu');
     echo "$count regression checks passed.\n";
 }

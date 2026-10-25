@@ -59,8 +59,9 @@ class ViewCacheService
         $params = ComponentHelper::getParams('com_comarquage');
         $keys = ['option', 'view', 'id', 'theme', 'subtheme', 'q', 'start', 'limitstart', 'Itemid', 'return'];
         $parts = [
-            'view_cache_schema=comarquage-1.0.0-v2',
+            'view_cache_schema=comarquage-1.0.2',
             'language=' . Factory::getApplication()->getLanguage()->getTag(),
+            'access=' . implode(',', Factory::getApplication()->getIdentity()->getAuthorisedViewLevels()),
             'params=' . hash('sha256', $params->toString()),
             'layout_theme=' . (string) $params->get('layout_theme', 'default'),
             'results_per_page=' . (string) $params->get('results_per_page', 20),

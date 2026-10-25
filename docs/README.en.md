@@ -23,7 +23,7 @@ Each section can be enabled separately and has its own menu item type. The exten
 Joomla 6.x, PHP 8.3+, a Joomla-supported MySQL/MariaDB database, PHP DOM, mbstring and ZIP. Allow at least 256 MiB PHP memory; 512 MiB is recommended for large imports. The server needs temporary disk space and outbound HTTPS access to DILA.
 
 1. Back up the site and database before upgrading.
-2. Download `pkg_comarquage-1.0.1.zip` from the GitHub release assets.
+2. Download `pkg_comarquage-1.0.2.zip` from the GitHub release assets.
 3. Upload it through **System → Install → Extensions**.
 4. Open **Components → Comarquage → Options** and check the enabled audiences and sources.
 5. Run the import. Keep the dashboard open until it finishes. If interrupted, run it again: it resumes from the last committed batch.

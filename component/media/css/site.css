@@ -663,6 +663,12 @@
     flex: 1 1 16rem;
 }
 
+/* Keep attribution readable when a template gives all footer links a light colour. */
+.comarquage .comarquage-signature .comarquage-source a {
+    color: var(--cq-blue-dark);
+    text-decoration: underline;
+}
+
 .comarquage-local-context strong {
     color: var(--cq-blue-dark);
     display: block;

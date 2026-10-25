@@ -1,4 +1,4 @@
-**1.0.1** : correction de la détection des mises à jour du package par Joomla. / Fix package update discovery in Joomla.
+**1.0.2** : menus multilingues et imbriqués, caches de liens par langue et contraste des sources. / Fix multilingual and nested menu routing, language-aware cached links and source attribution contrast.
 
 Destinée aux mairies, intercommunalités, organismes publics locaux et leurs intégrateurs, cette extension propose les démarches pour les **particuliers, associations et entreprises**. La personnalisation par code INSEE affiche un annuaire local issu de la DILA, avec une sélection de contacts pour chaque public.
 
@@ -8,6 +8,6 @@ Comarquage réunit le composant de démarches administratives, l’import planif
 
 Comarquage packages the administrative information component, scheduled importer and Smart Search adapter for Joomla 6. It uses current DILA Open Data, resumes interrupted imports and provides Joomla updates. French and English documentation is included.
 
-**Installation:** use `pkg_comarquage-1.0.1.zip`, not GitHub's generated source archive. Joomla 6.x, PHP 8.3+, MySQL/MariaDB and PHP DOM/mbstring/ZIP required.
+**Installation:** use `pkg_comarquage-1.0.2.zip`, not GitHub's generated source archive. Joomla 6.x, PHP 8.3+, MySQL/MariaDB and PHP DOM/mbstring/ZIP required.
 
 The administrative data is downloaded after installation. Create menu items and run the first import, then configure Joomla's scheduler. See the README for installation, update and attribution instructions.

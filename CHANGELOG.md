@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.2 — 2026-10-25
+
+- Route menu links in the visitor's language, including nested menus and access restrictions.
+- Isolate cached quick links by language, menu and access context.
+- Keep attribution links readable with municipal templates.
+
+FR : correction des menus multilingues et imbriqués, des liens d'accès rapides en cache et du contraste des liens de source. Validation sur la démonstration municipale Civora.
+
 ## 1.0.1 — 2026-10-25
 
 - Correct the update feed client to match Joomla's installed package identity, so the extension updater can discover new releases.
