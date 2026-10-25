@@ -32,6 +32,8 @@ assert first==(r/'dist'/f'pkg_comarquage-{version}.zip').read_bytes(),'Non-deter
 feed=ET.parse(r/'dist/update.xml').getroot().find('update')
 assert feed.findtext('sha256')==hashlib.sha256(first).hexdigest()
 assert feed.findtext('version')==version
+# Joomla records packages with client_id=0; omitting client defaults the feed to administrator.
+assert feed.findtext('client')=='site','Package updates must match the installed site client'
 for line in (r/'dist/SHA256SUMS').read_text().splitlines():
  digest,name=line.split('  ',1)
  assert hashlib.sha256((r/'dist'/name).read_bytes()).hexdigest()==digest,name

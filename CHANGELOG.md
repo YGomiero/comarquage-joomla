@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1 — 2026-10-25
+
+- Correct the update feed client to match Joomla's installed package identity, so the extension updater can discover new releases.
+- Make ZIP metadata deterministic across Windows and Linux builds.
+
+FR : correction de la détection des mises à jour du package par Joomla et des métadonnées ZIP pour des builds identiques sous Windows et Linux.
+
 ## 1.0.0 — 2026-10-25
 
 - First maintained Comarquage package, based on the local 0.2.32 component.

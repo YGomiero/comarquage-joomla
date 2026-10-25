@@ -42,7 +42,7 @@ sha = hashlib.sha256(blob).hexdigest()
 feed = f'''<?xml version="1.0" encoding="utf-8"?>
 <updates><update>
  <name>Comarquage</name><description>Service-Public / DILA Open Data for Joomla</description>
- <element>pkg_comarquage</element><type>package</type><version>{VERSION}</version>
+ <element>pkg_comarquage</element><type>package</type><client>site</client><version>{VERSION}</version>
  <infourl title="Comarquage">https://github.com/YGomiero/comarquage-joomla/releases/tag/{VERSION}</infourl>
  <downloads><downloadurl type="full" format="zip">https://github.com/YGomiero/comarquage-joomla/releases/download/{VERSION}/{name}</downloadurl></downloads>
  <tags><tag>stable</tag></tags><targetplatform name="joomla" version="6\\.[0-9]+"/>

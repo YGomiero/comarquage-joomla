@@ -39,7 +39,7 @@ Each section can be enabled separately and has its own menu item type. The exten
 
 ## Installation
 
-Install **`pkg_comarquage-1.0.0.zip`** from the release assets in Joomla's extension installer. GitHub's automatically generated source ZIP is for developers and is not the installable package.
+Install **`pkg_comarquage-1.0.1.zip`** from the release assets in Joomla's extension installer. GitHub's automatically generated source ZIP is for developers and is not the installable package.
 
 Open **Components → Comarquage**, run the first import and create menu items for Individuals, Associations, Businesses or Search. Leave the import page open until completion; an interrupted import resumes from its saved position.
 
