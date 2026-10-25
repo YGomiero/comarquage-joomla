@@ -53,6 +53,10 @@ Associations are selected from the current Individuals dataset, under official t
 
 The extension displays the source, download URL, file name, source-file date, local import date and original record link. Data publishers can change the schema or remove records; follow their dataset discussions and keep Comarquage updated.
 
+## Captures / Screenshots
+
+[Voir les trois rubriques, les contacts locaux et les menus / View the demo screenshots](docs/SCREENSHOTS.md).
+
 ## Development
 
 ```sh

@@ -28,7 +28,7 @@ The parser retains source URL and editorial date. The public renderer applies a 
 
 `#__comarquage_search_index`: local full-text search, refreshed during import.
 
-`#__comarquage_metadata`: import journal. `#__comarquage_local_organisations`: retained schema for local context, not an advertised full directory sync.
+`#__comarquage_metadata`: import journal. `#__comarquage_local_organisations`: optional local directory snapshot keyed by INSEE municipality code.
 
 ## Extension points and boundaries
 

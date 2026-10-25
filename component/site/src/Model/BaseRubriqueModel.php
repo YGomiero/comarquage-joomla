@@ -214,6 +214,9 @@ abstract class BaseRubriqueModel extends BaseDatabaseModel
             ->from($db->quoteName('#__comarquage_categories', 'c'))
             ->where($db->quoteName('c.universe') . ' = :universe')
             ->where($db->quoteName('c.state') . ' = 1')
+            // Shared online resources may also reference themes from another audience.
+            // Home cards follow the actual publications in this universe.
+            ->where("EXISTS (SELECT 1 FROM #__comarquage_item_category_map AS m INNER JOIN #__comarquage_items AS i ON i.id=m.item_id WHERE m.category_id=c.id AND i.state=1 AND JSON_UNQUOTE(JSON_EXTRACT(i.payload, '$.source_node'))='Publication')")
             ->bind(':universe', $universe)
             ->order($db->quoteName('c.title') . ' ASC');
 
