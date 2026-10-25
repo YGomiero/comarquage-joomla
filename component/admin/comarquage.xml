@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="component" method="upgrade">
+    <name>com_comarquage</name>
+    <author>Yann Gomiero</author>
+    <authorEmail>extensions@gomiero.me</authorEmail>
+    <authorUrl>https://github.com/YGomiero/distro-joomla</authorUrl>
+    <creationDate>2026-10</creationDate>
+    <copyright>(C) 2026 Yann Gomiero</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>1.0.0</version>
+    <description>COM_COMARQUAGE_XML_DESCRIPTION</description>
+    <namespace path="src">Joomla\Component\Comarquage</namespace>
+    <install>
+        <sql><file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file></sql>
+    </install>
+    <update><schemas><schemapath type="mysql">sql/updates/mysql</schemapath></schemas></update>
+    <uninstall>
+        <sql><file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file></sql>
+    </uninstall>
+    <files folder="site">
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+    <languages folder="site">
+        <language tag="fr-FR">language/fr-FR/com_comarquage.ini</language>
+        <language tag="en-GB">language/en-GB/com_comarquage.ini</language>
+    </languages>
+    <media destination="com_comarquage" folder="media">
+        <filename>joomla.asset.json</filename>
+        <folder>css</folder>
+        <folder>icons</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>themes</folder>
+    </media>
+    <administration>
+        <menu img="class:share-alt">COM_COMARQUAGE</menu>
+        <submenu>
+            <menu link="option=com_comarquage" img="class:dashboard">COM_COMARQUAGE_DASHBOARD</menu>
+            <menu link="option=com_comarquage&amp;view=logs" img="class:list">COM_COMARQUAGE_LOGS</menu>
+        </submenu>
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>README.md</filename>
+            <filename>LICENSE.txt</filename>
+            <folder>services</folder>
+            <folder>sql</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+        </files>
+        <languages folder="admin">
+            <language tag="fr-FR">language/fr-FR/com_comarquage.ini</language>
+            <language tag="fr-FR">language/fr-FR/com_comarquage.sys.ini</language>
+            <language tag="en-GB">language/en-GB/com_comarquage.ini</language>
+            <language tag="en-GB">language/en-GB/com_comarquage.sys.ini</language>
+        </languages>
+    </administration>
+</extension>

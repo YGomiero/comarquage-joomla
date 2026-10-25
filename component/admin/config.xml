@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <fieldset name="component" label="COM_COMARQUAGE_CONFIGURATION">
+        <field name="code_insee" type="text" label="COM_COMARQUAGE_FIELD_CODE_INSEE_LABEL" description="COM_COMARQUAGE_FIELD_CODE_INSEE_DESC" filter="alnum" maxlength="5" />
+        <field name="nom_commune" type="text" label="COM_COMARQUAGE_FIELD_NOM_COMMUNE_LABEL" filter="string" />
+        <field name="activer_personnalisation_locale" type="radio" label="COM_COMARQUAGE_FIELD_PERSONNALISATION_LABEL" layout="joomla.form.field.radio.switcher" default="0" filter="integer">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="enable_particuliers" type="radio" label="COM_COMARQUAGE_FIELD_ENABLE_PARTICULIERS_LABEL" layout="joomla.form.field.radio.switcher" default="1" filter="integer"><option value="0">JNO</option><option value="1">JYES</option></field>
+        <field name="enable_associations" type="radio" label="COM_COMARQUAGE_FIELD_ENABLE_ASSOCIATIONS_LABEL" layout="joomla.form.field.radio.switcher" default="1" filter="integer"><option value="0">JNO</option><option value="1">JYES</option></field>
+        <field name="enable_entreprises" type="radio" label="COM_COMARQUAGE_FIELD_ENABLE_ENTREPRISES_LABEL" layout="joomla.form.field.radio.switcher" default="1" filter="integer"><option value="0">JNO</option><option value="1">JYES</option></field>
+        <field name="cache_hours" type="number" label="COM_COMARQUAGE_FIELD_CACHE_HOURS_LABEL" default="24" min="1" max="720" filter="integer" />
+        <field name="results_per_page" type="number" label="COM_COMARQUAGE_FIELD_RESULTS_PER_PAGE_LABEL" description="COM_COMARQUAGE_FIELD_RESULTS_PER_PAGE_DESC" default="20" min="5" max="100" filter="integer" />
+        <field name="layout_theme" type="list" label="COM_COMARQUAGE_FIELD_LAYOUT_THEME_LABEL" default="default" filter="cmd">
+            <option value="default">COM_COMARQUAGE_THEME_DEFAULT</option>
+            <option value="compact">COM_COMARQUAGE_THEME_COMPACT</option>
+            <option value="mairie">COM_COMARQUAGE_THEME_MAIRIE</option>
+            <option value="signature">COM_COMARQUAGE_THEME_SIGNATURE</option>
+            <option value="service-public-classic">COM_COMARQUAGE_THEME_SERVICE_PUBLIC_CLASSIC</option>
+            <option value="astroid-three">COM_COMARQUAGE_THEME_ASTROID_THREE</option>
+        </field>
+        <field name="fetch_mode" type="list" label="COM_COMARQUAGE_FIELD_FETCH_MODE_LABEL" default="remote" filter="cmd">
+            <option value="remote">COM_COMARQUAGE_FETCH_REMOTE</option>
+            <option value="local">COM_COMARQUAGE_FETCH_LOCAL</option>
+        </field>
+        <field name="feed_particuliers" type="text" label="COM_COMARQUAGE_FIELD_FEED_PARTICULIERS_LABEL" description="COM_COMARQUAGE_FIELD_FEED_PARTICULIERS_DESC" default="https://www.data.gouv.fr/fr/datasets/service-public-fr-guide-vos-droits-et-demarches-particuliers/" filter="string" size="90" />
+        <field name="feed_associations" type="text" label="COM_COMARQUAGE_FIELD_FEED_ASSOCIATIONS_LABEL" description="COM_COMARQUAGE_FIELD_FEED_ASSOCIATIONS_DESC" default="https://lecomarquage.service-public.gouv.fr/vdd/3.5/part/zip/vosdroits-latest.zip" filter="string" size="90" />
+        <field name="feed_entreprises" type="text" label="COM_COMARQUAGE_FIELD_FEED_ENTREPRISES_LABEL" description="COM_COMARQUAGE_FIELD_FEED_ENTREPRISES_DESC" default="https://www.data.gouv.fr/fr/datasets/service-public-fr-guide-vos-droits-et-demarches-professionnels-entreprises/" filter="string" size="90" />
+        <field name="target_version" type="text" label="COM_COMARQUAGE_FIELD_TARGET_VERSION_LABEL" default="3.5" filter="string" />
+        <field name="batch_size" type="number" label="COM_COMARQUAGE_FIELD_BATCH_SIZE_LABEL" default="150" min="10" max="200" filter="integer" />
+        <field name="import_max_runtime" type="number" label="COM_COMARQUAGE_FIELD_IMPORT_MAX_RUNTIME_LABEL" description="COM_COMARQUAGE_FIELD_IMPORT_MAX_RUNTIME_DESC" default="1800" min="30" max="1800" filter="integer" />
+        <field name="import_max_files" type="number" label="COM_COMARQUAGE_FIELD_IMPORT_MAX_FILES_LABEL" description="COM_COMARQUAGE_FIELD_IMPORT_MAX_FILES_DESC" default="10000" min="0" max="10000" filter="integer" />
+        <field name="http_timeout" type="number" label="COM_COMARQUAGE_FIELD_TIMEOUT_LABEL" default="60" min="5" max="600" filter="integer" />
+        <field name="canonical_base" type="url" label="COM_COMARQUAGE_FIELD_CANONICAL_BASE_LABEL" filter="url" />
+        <field name="show_local_blocks" type="radio" label="COM_COMARQUAGE_FIELD_SHOW_LOCAL_BLOCKS_LABEL" layout="joomla.form.field.radio.switcher" default="1" filter="integer"><option value="0">JNO</option><option value="1">JYES</option></field>
+        <field name="show_jsonld" type="radio" label="COM_COMARQUAGE_FIELD_SHOW_JSONLD_LABEL" layout="joomla.form.field.radio.switcher" default="1" filter="integer"><option value="0">JNO</option><option value="1">JYES</option></field>
+    </fieldset>
+    <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL">
+        <field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" component="com_comarquage" section="component" validate="rules" />
+    </fieldset>
+</config>

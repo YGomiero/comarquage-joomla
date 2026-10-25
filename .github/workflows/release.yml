@@ -1,0 +1,56 @@
+name: Validate and release
+on:
+  push:
+    branches: [main]
+    tags: ['[0-9]*.[0-9]*.[0-9]*']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: shivammathur/setup-php@ec406be512d7077f68eed36e63f4d91bc006edc4 # 2.35.4
+        with:
+          php-version: '8.3'
+          extensions: dom, mbstring, zip
+          coverage: none
+      - name: PHP syntax
+        run: find component plugins -name '*.php' -print0 | xargs -0 -n1 php -l
+      - name: Regression checks
+        run: php tests/run.php
+      - name: Package audit and reproducible build
+        run: python3 tools/audit.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: distro-package
+          path: dist/
+  publish:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: distro-package
+          path: dist
+      - name: Publish immutable release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          version=$(python3 -c 'import xml.etree.ElementTree as E; print(E.parse("pkg_comarquage.xml").getroot().findtext("version"))')
+          test "$RELEASE_TAG" = "$version"
+          (cd dist && sha256sum --check SHA256SUMS)
+          gh release create "$version" --verify-tag --latest --title "Distro $version" --notes-file .github/release-notes.md "dist/pkg_comarquage-$version.zip" dist/update.xml dist/SHA256SUMS

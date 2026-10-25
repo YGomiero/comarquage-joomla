@@ -1,0 +1,7 @@
+{
+    "id": "default",
+    "title": "Standard",
+    "description": "Mise en page moderne par défaut.",
+    "builtin": true,
+    "css": ""
+}

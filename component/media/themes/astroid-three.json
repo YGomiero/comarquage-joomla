@@ -1,0 +1,28 @@
+{
+    "id": "astroid-three",
+    "title": "Astroid Three",
+    "description": "Theme contraste concu pour le template Astroid Three, avec mode sombre accessible.",
+    "builtin": true,
+    "params": {
+        "radius": "0px",
+        "density": "template",
+        "accent": "#f2b84b"
+    },
+    "icons": {
+        "Papiers": "fa-address-card",
+        "Famille": "fa-people-roof",
+        "Social": "fa-hand-holding-heart",
+        "Travail": "fa-user-tie",
+        "Logement": "fa-house-chimney",
+        "Transports": "fa-train-subway",
+        "Argent": "fa-coins",
+        "Justice": "fa-scale-balanced",
+        "Etranger": "fa-earth-europe",
+        "Loisirs": "fa-masks-theater",
+        "Comment faire si": "fa-route",
+        "Services": "fa-laptop-file",
+        "Questions": "fa-circle-question",
+        "Fiscalite": "fa-file-invoice-dollar",
+        "Ressources humaines": "fa-people-arrows"
+    }
+}

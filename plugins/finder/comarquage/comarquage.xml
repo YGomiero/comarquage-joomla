@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="finder" method="upgrade">
+    <name>PLG_FINDER_COMARQUAGE</name>
+    <author>Yann Gomiero</author>
+    <authorEmail>extensions@gomiero.me</authorEmail>
+    <authorUrl>https://github.com/YGomiero/distro-joomla</authorUrl>
+    <creationDate>2026-10</creationDate>
+    <copyright>(C) 2026 Yann Gomiero</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>1.0.0</version>
+    <description>PLG_FINDER_COMARQUAGE_XML_DESCRIPTION</description>
+    <namespace path="src">Joomla\Plugin\Finder\Comarquage</namespace>
+    <files>
+        <filename>LICENSE.txt</filename>
+        <folder plugin="comarquage">services</folder>
+        <folder>src</folder>
+    </files>
+    <languages>
+        <language tag="fr-FR">language/fr-FR/plg_finder_comarquage.ini</language>
+        <language tag="fr-FR">language/fr-FR/plg_finder_comarquage.sys.ini</language>
+        <language tag="en-GB">language/en-GB/plg_finder_comarquage.ini</language>
+        <language tag="en-GB">language/en-GB/plg_finder_comarquage.sys.ini</language>
+    </languages>
+</extension>

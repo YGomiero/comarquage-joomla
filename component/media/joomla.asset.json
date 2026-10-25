@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "com_comarquage",
+  "version": "1.0.0",
+  "description": "Distro public assets",
+  "license": "GPL-2.0-or-later",
+  "assets": [
+    {
+      "name": "com_comarquage.site",
+      "type": "style",
+      "uri": "com_comarquage/css/site.css"
+    }
+  ]
+}

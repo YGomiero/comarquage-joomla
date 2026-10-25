@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="params">
+        <fieldset name="task_params">
+            <field name="universe" type="list" label="PLG_TASK_COMARQUAGEIMPORT_FIELD_UNIVERSE_LABEL" default="">
+                <option value="">PLG_TASK_COMARQUAGEIMPORT_ALL_UNIVERSES</option>
+                <option value="particuliers">COM_COMARQUAGE_PARTICULIERS</option>
+                <option value="associations">COM_COMARQUAGE_ASSOCIATIONS</option>
+                <option value="entreprises">COM_COMARQUAGE_ENTREPRISES</option>
+            </field>
+            <field name="max_runtime" type="number" label="PLG_TASK_COMARQUAGEIMPORT_FIELD_MAX_RUNTIME_LABEL" description="PLG_TASK_COMARQUAGEIMPORT_FIELD_MAX_RUNTIME_DESC" default="240" min="30" max="1800" filter="integer" />
+            <field name="max_files" type="number" label="PLG_TASK_COMARQUAGEIMPORT_FIELD_MAX_FILES_LABEL" description="PLG_TASK_COMARQUAGEIMPORT_FIELD_MAX_FILES_DESC" default="250" min="0" max="5000" filter="integer" />
+        </fieldset>
+    </fields>
+</form>

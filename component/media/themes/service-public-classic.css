@@ -1,0 +1,104 @@
+.comarquage-theme-service-public-classic.comarquage {
+    --cq-blue: #0b6ba8;
+    --cq-blue-dark: #25465f;
+    --cq-cyan: #187f3e;
+    --cq-ink: #414856;
+    --cq-muted: #687482;
+    --cq-line: #d8dee5;
+    --cq-soft: #f2f6f8;
+    --cq-card: #ffffff;
+    --cq-shadow: 0 10px 28px rgba(65,72,86,.12);
+}
+
+.comarquage-theme-service-public-classic .comarquage-hero {
+    background: linear-gradient(135deg, #25465f 0%, #0b6ba8 54%, #f2f6f8 54%, #ffffff 100%);
+    border: 1px solid var(--cq-line);
+    border-bottom: 5px solid var(--cq-cyan);
+}
+
+.comarquage-theme-service-public-classic .comarquage-topic-grid {
+    gap: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.comarquage-theme-service-public-classic .comarquage-topic {
+    border-color: #cbd4dc;
+    box-shadow: none;
+    margin-bottom: -1px;
+    margin-right: -1px;
+    min-height: 12rem;
+    text-align: center;
+}
+
+.comarquage-theme-service-public-classic .comarquage-topic-icon {
+    background: transparent;
+    height: 5.5rem;
+    margin: 0 auto .35rem;
+    width: 5.5rem;
+}
+
+.comarquage-theme-service-public-classic .comarquage-icon-img {
+    height: 5rem;
+    max-width: 5rem;
+    width: 5rem;
+}
+
+.comarquage-theme-service-public-classic .comarquage-topic > .fa-arrow-right {
+    display: none;
+}
+
+.comarquage-theme-service-public-classic .comarquage-topic strong {
+    color: var(--cq-blue);
+    text-transform: uppercase;
+}
+
+.comarquage-theme-service-public-classic .comarquage-fiche-tools {
+    justify-content: flex-end;
+}
+
+.comarquage-theme-service-public-classic .comarquage-accordion,
+.comarquage-theme-service-public-classic .comarquage-case,
+.comarquage-theme-service-public-classic .comarquage-situation {
+    border-radius: 6px;
+}
+
+.comarquage-theme-service-public-classic .comarquage-note {
+    border-left: 5px solid var(--cq-blue);
+}
+
+.comarquage-theme-service-public-classic .comarquage-note-attention,
+.comarquage-theme-service-public-classic .comarquage-note-avertissement {
+    border-left-color: #c0392b;
+}
+
+.comarquage-theme-service-public-classic .comarquage-note-asavoir,
+.comarquage-theme-service-public-classic .comarquage-note-rappel {
+    border-left-color: #187f3e;
+}
+
+.comarquage-theme-service-public-classic .comarquage-list {
+    list-style-position: outside;
+}
+
+.comarquage-theme-service-public-classic .comarquage-list-type-puce {
+    list-style-type: disc;
+}
+
+.comarquage-theme-service-public-classic .comarquage-resource,
+.comarquage-theme-service-public-classic .comarquage-related {
+    background: var(--cq-soft);
+    border: 1px solid var(--cq-line);
+    padding: 1rem;
+}
+
+@media (max-width: 980px) {
+    .comarquage-theme-service-public-classic .comarquage-topic-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 620px) {
+    .comarquage-theme-service-public-classic .comarquage-topic-grid {
+        grid-template-columns: 1fr;
+    }
+}

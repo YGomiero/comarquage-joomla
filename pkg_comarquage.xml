@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" method="upgrade">
+    <name>PKG_COMARQUAGE</name>
+    <packagename>comarquage</packagename>
+    <author>Yann Gomiero</author>
+    <authorEmail>extensions@gomiero.me</authorEmail>
+    <authorUrl>https://github.com/YGomiero/distro-joomla</authorUrl>
+    <creationDate>2026-10</creationDate>
+    <copyright>(C) 2026 Yann Gomiero</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>1.0.0</version>
+    <packager>Yann Gomiero</packager>
+    <packagerurl>https://github.com/YGomiero/distro-joomla</packagerurl>
+    <description>PKG_COMARQUAGE_DESCRIPTION</description>
+    <scriptfile>script.php</scriptfile>
+    <blockChildUninstall>true</blockChildUninstall>
+    <files folder="packages">
+        <file type="component" id="com_comarquage">com_comarquage.zip</file>
+        <file type="plugin" id="comarquage" group="finder">plg_finder_comarquage.zip</file>
+        <file type="plugin" id="comarquageimport" group="task">plg_task_comarquageimport.zip</file>
+    </files>
+    <languages folder="language">
+        <language tag="fr-FR">fr-FR/pkg_comarquage.sys.ini</language>
+        <language tag="en-GB">en-GB/pkg_comarquage.sys.ini</language>
+    </languages>
+    <updateservers><server type="extension" priority="1" name="Distro — GitHub releases">https://github.com/YGomiero/distro-joomla/releases/latest/download/update.xml</server></updateservers>
+</extension>

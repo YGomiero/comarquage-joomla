@@ -1,0 +1,36 @@
+{
+    "id": "service-public-classic",
+    "title": "Service-Public classique",
+    "description": "Theme optionnel inspire des anciens habillages GPLv3 : grille claire, icones SVG et blocs de fiche plus marques.",
+    "builtin": true,
+    "params": {
+        "radius": "6px",
+        "density": "classic",
+        "accent": "#0b6ba8"
+    },
+    "icons": {
+        "Papiers": "svg:home-icon-papiers.svg",
+        "Famille": "svg:home-icon-famille.svg",
+        "Social": "svg:home-icon-sante.svg",
+        "Sante": "svg:home-icon-sante.svg",
+        "Travail": "svg:home-icon-travail.svg",
+        "Formation": "svg:home-icon-travail.svg",
+        "Logement": "svg:home-icon-logement.svg",
+        "Transport": "svg:home-icon-transports.svg",
+        "Mobilite": "svg:home-icon-transports.svg",
+        "Argent": "svg:home-icon-argent.svg",
+        "Impots": "svg:home-icon-fiscalite.svg",
+        "Justice": "svg:home-icon-justice.svg",
+        "Etranger": "svg:home-icon-etrangers.svg",
+        "Loisirs": "svg:home-icon-loisirs.svg",
+        "Creation": "svg:home-icon-creation.svg",
+        "Fonctionnement": "svg:home-icon-fonctionnement.svg",
+        "Financement": "svg:home-icon-financement.svg",
+        "Benevoles": "svg:home-icon-obligations.svg",
+        "Fiscalite": "svg:home-icon-fiscalite.svg",
+        "Gestion": "svg:home-icon-gestion.svg",
+        "Ressources humaines": "svg:home-icon-ressources-humaines.svg",
+        "Commerce": "svg:home-icon-commerce.svg",
+        "Secteurs": "svg:home-icon-secteurs.svg"
+    }
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="448" viewBox="0 0 1024 448">
+<!-- Original artwork. (C) 2026 Yann Gomiero; GPL-2.0-or-later -->
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#082b40"/><stop offset="1" stop-color="#15566a"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-opacity=".14"/></filter></defs>
+<rect width="1024" height="448" fill="#f5f4ee"/>
+<path d="M0 0h580l-92 448H0z" fill="url(#bg)"/>
+<circle cx="58" cy="52" r="5" fill="#69d7cb"/><text x="75" y="57" font-family="Arial,sans-serif" font-size="13" font-weight="bold" letter-spacing="2" fill="#c8eeea">JOOMLA · OPEN DATA</text>
+<text x="54" y="164" font-family="Arial,sans-serif" font-weight="bold" font-size="82" letter-spacing="-3" fill="white">Distro</text>
+<text x="58" y="212" font-family="Arial,sans-serif" font-size="25" fill="#e5f1f2">Les démarches publiques,</text><text x="58" y="247" font-family="Arial,sans-serif" font-size="25" fill="#e5f1f2">au cœur de votre site.</text>
+<path d="M58 282h54" stroke="#69d7cb" stroke-width="4"/>
+<text x="58" y="323" font-family="Arial,sans-serif" font-size="16" fill="#c9e1e5">Service-Public / DILA</text><text x="58" y="350" font-family="Arial,sans-serif" font-size="15" fill="#c9e1e5">Import · Recherche · Mises à jour</text>
+<text x="58" y="409" font-family="Arial,sans-serif" font-size="12" fill="#91b7c0">EXTENSION INDÉPENDANTE · GPL</text>
+<g filter="url(#shadow)"><rect x="612" y="54" width="350" height="340" rx="18" fill="white"/></g>
+<rect x="612" y="54" width="350" height="45" rx="18" fill="#e6efee"/><path d="M612 82h350v17H612z" fill="#e6efee"/>
+<circle cx="638" cy="77" r="4" fill="#679999"/><circle cx="652" cy="77" r="4" fill="#679999"/><circle cx="666" cy="77" r="4" fill="#679999"/>
+<text x="902" y="82" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#386266">Votre site Joomla</text>
+<text x="640" y="137" font-family="Arial,sans-serif" font-size="19" font-weight="bold" fill="#123b4c">Démarches administratives</text>
+<rect x="640" y="155" width="294" height="35" rx="7" fill="#f3f6f5" stroke="#dee8e5"/><circle cx="657" cy="171" r="5" stroke="#73918d" stroke-width="2" fill="none"/><path d="m661 175 4 4" stroke="#73918d" stroke-width="2"/><text x="679" y="177" font-family="Arial,sans-serif" font-size="12" fill="#66837e">Rechercher une démarche…</text>
+<g font-family="Arial,sans-serif" font-size="14" fill="#234c58">
+<rect x="640" y="209" width="294" height="44" rx="7" fill="#e6f5f1"/><circle cx="662" cy="231" r="8" fill="#49a69a"/><text x="682" y="236">Particuliers</text><path d="m911 227 4 4-4 4" stroke="#49a69a" stroke-width="2" fill="none"/>
+<rect x="640" y="264" width="294" height="44" rx="7" fill="#eef1fa"/><circle cx="662" cy="286" r="8" fill="#6e88ba"/><text x="682" y="291">Associations</text><path d="m911 282 4 4-4 4" stroke="#6e88ba" stroke-width="2" fill="none"/>
+<rect x="640" y="319" width="294" height="44" rx="7" fill="#fcf0e8"/><circle cx="662" cy="341" r="8" fill="#cd956b"/><text x="682" y="346">Entreprises</text><path d="m911 337 4 4-4 4" stroke="#cd956b" stroke-width="2" fill="none"/>
+</g><path d="M525 218h64m-9-8 9 8-9 8" stroke="#69b6ad" stroke-width="3" fill="none"/>
+</svg>
