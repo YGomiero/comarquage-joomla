@@ -12,6 +12,7 @@ def archive(files):
     with zipfile.ZipFile(stream, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         for name, data in sorted(files.items()):
             entry = zipfile.ZipInfo(name, (2026, 1, 1, 0, 0, 0))
+            entry.create_system = 3  # Stable Unix ZIP metadata on Windows and Linux.
             entry.compress_type = zipfile.ZIP_DEFLATED
             entry.external_attr = 0o644 << 16
             z.writestr(entry, data)
