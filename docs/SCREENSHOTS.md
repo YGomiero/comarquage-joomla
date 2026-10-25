@@ -1,26 +1,37 @@
-# Captures / screenshots
+# Captures / Screenshots
 
-Captures du site local de démonstration, Joomla Cassiopeia, avec Béthune (code INSEE 62119). Données DILA importées le 25 octobre 2026. Les liens et le module Menu sont gérés par Joomla.
+Captures réelles de Comarquage 1.0.2 sur Étoile, avec le thème municipal Civora. Val-sur-Rivière est une commune fictive. Le thème Civora et le contenu du site de démonstration ne sont pas inclus dans le package Comarquage.
 
-Local Joomla demo, with separate Individuals, Associations and Businesses sections and optional municipality context.
+Actual Comarquage 1.0.2 screenshots using the Civora municipal template. The template and demo website are not included. Official administrative data remains in French.
 
-## Particuliers — Béthune, INSEE 62119
+## Particuliers
 
-![Particuliers — Béthune, INSEE 62119](screenshots/particuliers-bethune.png)
+Les démarches du quotidien dans un site municipal.
 
-## Associations — création, gestion et financement
+![Particuliers — Comarquage dans Civora](screenshots/etoile-particuliers.jpg)
 
-![Associations — création, gestion et financement](screenshots/associations-bethune.png)
+## Associations
 
-## Entreprises — démarches professionnelles
+Création, gestion, financement et bénévolat.
 
-![Entreprises — démarches professionnelles](screenshots/entreprises-bethune.png)
+![Associations — Comarquage dans Civora](screenshots/etoile-associations.jpg)
 
-## Services de Béthune et quatre liens de menu
+## Entreprises
 
-![Services de Béthune et quatre liens de menu](screenshots/services-locaux-et-menus.png)
+Création et fonctionnement de l’entreprise.
 
-## Recherche dans les trois univers
+![Entreprises — Comarquage dans Civora](screenshots/etoile-entreprises.jpg)
 
-![Recherche dans les trois univers](screenshots/recherche-demarches.png)
+## Menus Joomla
 
+Les trois publics accessibles depuis le menu municipal.
+
+![Menus Joomla — Comarquage dans Civora](screenshots/etoile-menus.jpg)
+
+## Test du code INSEE — Béthune 62119
+
+Validation distincte sur Joomla Cassiopeia : 46 contacts officiels chargés pour Béthune, avec sélection selon le public. Le code INSEE n’est pas un code postal. / Separate municipality test on Joomla Cassiopeia.
+
+![Contacts de Béthune et menus](screenshots/services-locaux-et-menus.png)
+
+![Recherche des démarches](screenshots/recherche-demarches.png)

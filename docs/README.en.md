@@ -29,6 +29,8 @@ Joomla 6.x, PHP 8.3+, a Joomla-supported MySQL/MariaDB database, PHP DOM, mbstri
 5. Run the import. Keep the dashboard open until it finishes. If interrupted, run it again: it resumes from the last committed batch.
 6. Create menu items for Comarquage's Individuals, Associations, Businesses or Search views.
 
+On a multilingual site, create menu items for each language and assign their language in Joomla. Internal links prefer a menu in the current language, then an All Languages menu. Nested menu items are supported.
+
 On first installation the package enables its task and Smart Search plugins. Upgrades preserve plugin states and existing settings. Create scheduled tasks separately from the dashboard.
 
 ## Current sources

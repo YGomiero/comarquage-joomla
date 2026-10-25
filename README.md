@@ -57,6 +57,10 @@ The extension displays the source, download URL, file name, source-file date, lo
 
 [Voir les trois rubriques, les contacts locaux et les menus / View the demo screenshots](docs/SCREENSHOTS.md).
 
+[![Les trois publics dans le menu municipal Civora](docs/screenshots/etoile-menus.jpg)](docs/SCREENSHOTS.md)
+
+Exemple d’intégration dans le thème municipal Civora, non inclus dans Comarquage. / Example integration with the Civora municipal template, not included in Comarquage.
+
 ## Development
 
 ```sh

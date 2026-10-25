@@ -29,6 +29,8 @@ Joomla 6.x, PHP 8.3 ou supérieur, base MySQL/MariaDB compatible Joomla, extensi
 5. Lancer **Relancer l’import**. Garder la page ouverte jusqu’à la fin. En cas d’arrêt, relancer : le traitement reprend au dernier lot validé.
 6. Créer un lien de menu de type **Comarquage → Particuliers**, **Associations**, **Entreprises** ou **Recherche**.
 
+Sur un site multilingue, créer les liens pour chaque langue et définir leur langue dans Joomla. Les liens internes privilégient le menu de la langue courante, puis un menu « Toutes les langues ». Ils peuvent aussi être placés dans un sous-menu.
+
 Le package installe et active les plugins de tâches planifiées et de recherche avancée lors d’une première installation. Une mise à jour préserve leurs états et les paramètres existants. Les tâches automatiques doivent être créées depuis le tableau de bord.
 
 ## Sources actuelles
