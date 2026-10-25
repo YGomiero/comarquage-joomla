@@ -30,6 +30,8 @@ Comarquage is designed for **French municipalities, intermunicipal authorities a
 
 Each section can be enabled separately and has its own menu item type. The extension publishes information and links to official services; it does not itself accept administrative applications.
 
+**Geographic scope and language:** this extension is intended for organisations serving the public in France. Its official administrative records cover French procedures and remain in French. English extension language files and documentation do not translate the imported Service-Public content.
+
 ## Compatibility
 
 - Joomla **6.x**, PHP **8.3+**, MySQL/MariaDB supported by Joomla.

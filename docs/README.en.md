@@ -1,5 +1,7 @@
 # English guide — Comarquage
 
+![Comarquage — French public services on your Joomla website](comarquage-banner-en.svg)
+
 [Home](../README.md) · [Français](README.fr.md)
 
 ## Purpose
@@ -17,6 +19,8 @@ Comarquage is designed for **French municipalities, intermunicipal authorities a
 - **Businesses**: starting a business, management, taxation, employment and formalities.
 
 Each section can be enabled separately and has its own menu item type. The extension publishes information and links to official services; it does not itself accept administrative applications.
+
+**Geographic scope and language:** this extension is intended for organisations serving the public in France. Its official administrative records cover French procedures and remain in French. English extension language files and documentation do not translate the imported Service-Public content.
 
 ## Requirements and installation
 
