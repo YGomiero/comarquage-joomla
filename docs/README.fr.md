@@ -23,7 +23,7 @@ Les trois rubriques peuvent être activées séparément et possèdent leurs pro
 Joomla 6.x, PHP 8.3 ou supérieur, base MySQL/MariaDB compatible Joomla, extensions PHP DOM, mbstring et ZIP. Prévoir 256 Mo de mémoire PHP au minimum, 512 Mo conseillés pour les gros imports, de l’espace temporaire et une connexion HTTPS sortante vers les sources DILA.
 
 1. Sauvegarder le site et sa base avant une mise à niveau.
-2. Télécharger le fichier `pkg_comarquage-1.0.2.zip` joint à la release GitHub.
+2. Télécharger le fichier `pkg_comarquage-1.0.3.zip` joint à la release GitHub.
 3. Dans Joomla, ouvrir **Système → Installation → Extensions**, puis déposer ce ZIP.
 4. Ouvrir **Composants → Comarquage → Paramètres** pour vérifier les sources et les univers activés.
 5. Lancer **Relancer l’import**. Garder la page ouverte jusqu’à la fin. En cas d’arrêt, relancer : le traitement reprend au dernier lot validé.

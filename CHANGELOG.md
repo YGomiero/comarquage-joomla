@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.3 — 2026-10-29
+
+- Fix malformed English INI assignments in the component language and system language files.
+- Translate the dashboard Actions heading and the Service-Public classic theme option.
+- Validate all 18 INI files with strict syntax and both PHP parsing modes, and check translation references separately for each client and plugin.
+
+FR : correction des fichiers anglais signalés lors de la revue JED, des libellés Actions et du thème Service-Public classique ; contrôle automatique renforcé des traductions.
+
 ## 1.0.2 — 2026-10-25
 
 - Route menu links in the visitor's language, including nested menus and access restrictions.

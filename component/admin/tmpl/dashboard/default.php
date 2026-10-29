@@ -155,7 +155,7 @@ use Joomla\CMS\Router\Route;
                                 <tr>
                                     <th><?php echo Text::_('JGLOBAL_TITLE'); ?></th>
                                     <th><?php echo Text::_('JGLOBAL_DESCRIPTION'); ?></th>
-                                    <th><?php echo Text::_('JACTION'); ?></th>
+                                    <th><?php echo Text::_('COM_COMARQUAGE_ACTIONS'); ?></th>
                                 </tr>
                             </thead>
                             <tbody>

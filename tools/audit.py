@@ -14,17 +14,7 @@ for p in manifests:
 assert ET.parse(manifests[0]).getroot().findtext('updateservers/server').endswith('/releases/latest/download/update.xml')
 for p in r.rglob('*.xml'): ET.parse(p)
 for p in r.rglob('*.json'):json.loads(p.read_text(encoding='utf-8'))
-for lang in ['fr-FR','en-GB']:
- defined=set()
- for p in r.rglob('*.ini'):
-  if lang not in p.parts:continue
-  keys=re.findall(r'^([A-Z][A-Z0-9_]+)\s*=',p.read_text(encoding='utf-8'),re.M)
-  assert len(keys)==len(set(keys)),f'Duplicate translation key in {p}'
-  defined.update(keys)
- used=set()
- for p in (r/'component').rglob('*.php'):
-  used.update(re.findall(r"Text::(?:_|sprintf|script)\('((?:COM_COMARQUAGE_)[A-Z0-9_]+)'",p.read_text(encoding='utf-8')))
- assert not used-defined,f'{lang}: missing translations {sorted(used-defined)}'
+subprocess.run(['php', str(r/'tests/languages.php')], check=True)
 subprocess.run([sys.executable,str(r/'tools/build.py')],check=True)
 first=(r/'dist'/f'pkg_comarquage-{version}.zip').read_bytes()
 subprocess.run([sys.executable,str(r/'tools/build.py')],check=True)
